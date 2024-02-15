@@ -49,6 +49,7 @@
       isDown = true;
       slider.classList.add('active');
       startX = e.pageX - slider.offsetLeft;
+      console.log(slider.scrollLeft)
       scrollLeft = slider.scrollLeft;
     })
     slider.addEventListener('mouseleave', () => {
@@ -66,6 +67,7 @@
       e.preventDefault();
       const x = e.pageX - slider.offsetLeft;
       let walk = (x - startX) * 2;
+      console.log(walk);
       slider.scrollLeft = scrollLeft - walk;
     })
 
